@@ -12,7 +12,7 @@ export const Navbar = () => {
     const [scrolledPastThreshold, setScrolledPastThreshold] = useState(false);
 
     useMotionValueEvent(scrollY, 'change', (latest) => {
-        setScrolledPastThreshold(latest > 950);
+        setScrolledPastThreshold(latest > window.innerHeight);
 
         if (!scrolledPastThreshold) setIsOpen(false);
     });
@@ -45,7 +45,11 @@ export const Navbar = () => {
             </AnimatePresence>
 
             <AnimatePresence>
-                {isOpen && <div className="absolute right-0 top-10">Prova</div>}
+                {isOpen && (
+                    <div className="absolute right-0 top-10">
+                        <ThemeToggleButton />
+                    </div>
+                )}
             </AnimatePresence>
         </motion.div>
     );
