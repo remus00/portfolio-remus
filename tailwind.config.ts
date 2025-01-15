@@ -11,6 +11,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: 'var(--font-sans)',
+                jura: 'var(--font-jura)',
             },
             colors: {
                 background: 'hsl(var(--background))',
@@ -42,6 +43,9 @@ export default {
                 destructive: {
                     DEFAULT: 'hsl(var(--destructive))',
                     foreground: 'hsl(var(--destructive-foreground))',
+                },
+                title: {
+                    DEFAULT: 'hsl(var(--title))',
                 },
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
