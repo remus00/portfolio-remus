@@ -1,17 +1,14 @@
-import { cn, jura } from '@/lib/utils';
 import { RemusImg } from '@/public';
 import Image from 'next/image';
+import { SectionTitle } from './section-title';
 
 export const AboutSection = () => {
     return (
         <section
             id="about"
-            className="text-title flex w-full flex-col items-center justify-center gap-8 py-32"
+            className="flex w-full flex-col items-center justify-center gap-8 py-32 text-title"
         >
-            <h2 className="text-[32px] leading-[40px]">
-                <span className={cn('font-bold text-primary', jura.className)}>0.1</span>{' '}
-                - Who am I?
-            </h2>
+            <SectionTitle sectionNumber={1} label="Who am I?" />
 
             <div className="flex items-start justify-center gap-8">
                 <div className="relative size-64 shrink-0 overflow-hidden rounded-[32px] border-[2px] border-card">
