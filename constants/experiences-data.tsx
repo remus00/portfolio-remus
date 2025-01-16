@@ -1,4 +1,5 @@
 import { FramerMotionIcon } from '@/components/icons/framer-motion-icon';
+import { MaterialUiIcon } from '@/components/icons/material-ui';
 import { ReduxIcon } from '@/components/icons/redux-icon';
 import { WolicoLogo } from '@/public';
 import { Experience } from '@/types/experience';
@@ -31,18 +32,19 @@ export const experiencesData: Experience[] = [
         techStack: [
             { icon: 'teenyicons:nextjs-solid', label: 'Next.js' },
             { icon: 'simple-icons:react', label: 'React.js' },
-            { icon: 'ri:tailwind-css-fill', label: 'Tailwind.css' },
+            { icon: 'lineicons:typescript', label: 'Typescript' },
             {
                 icon: <ReduxIcon className="h-4 w-4 text-muted-foreground" />,
                 label: 'Redux',
             },
+            { icon: 'devicon-plain:axios', label: 'Axios' },
+            { icon: 'simple-icons:reactquery', label: 'React Query' },
+            { icon: 'ri:tailwind-css-fill', label: 'Tailwind.css' },
             {
                 icon: <FramerMotionIcon className="h-4 w-4 text-muted-foreground" />,
                 label: 'Framer Motion',
             },
-            { icon: 'simple-icons:reactquery', label: 'React Query' },
             { icon: 'simple-icons:shadcnui', label: 'Shadcn/ui' },
-            { icon: 'devicon-plain:axios', label: 'Axios' },
         ],
         techStackHeight: '52px',
     },
@@ -50,12 +52,21 @@ export const experiencesData: Experience[] = [
         name: 'EvoHunt',
         rangeDate: 'Sep 2023 - Dec 2023',
         info: {
-            position: 'Intern - Frontend developer',
+            position: 'Internship - Frontend developer',
             location: 'Turin Italy',
             industry: 'Consulting Agency',
         },
-        description: '',
-        techStack: [{ icon: 'simple-icons:react', label: 'React.js' }],
+        description:
+            'Following the initial skill assessment, I was tasked with developing the entire website UI, reviewing and upgrading existing UI components to align them with the updated design, as well as implementing new solutions for frontend challenges and creating dynamic components.',
+        techStack: [
+            { icon: 'simple-icons:react', label: 'React.js' },
+            { icon: 'flowbite:html-solid', label: 'HTML' },
+            { icon: 'flowbite:css-solid', label: 'CSS' },
+            { icon: 'lineicons:javascript', label: 'Javascript' },
+            { icon: 'lineicons:typescript', label: 'Typescript' },
+            { icon: 'mdi:sass', label: 'Sass' },
+            { icon: <MaterialUiIcon />, label: 'Material Ui' },
+        ],
         techStackHeight: '24px',
     },
 ];

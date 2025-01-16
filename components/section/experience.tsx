@@ -28,7 +28,7 @@ export const Experience = () => {
                 {experiencesData.map((item, idx) => (
                     <div
                         key={idx}
-                        className="relative flex flex-col gap-8 rounded-[32px] bg-card p-8"
+                        className="relative flex flex-col rounded-[32px] bg-card p-8"
                     >
                         <ExperienceTitle
                             img={item.img ?? ''}
@@ -47,10 +47,10 @@ export const Experience = () => {
                                         opacity: 1,
                                     }}
                                     exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.7, easings: 'easeInOut' }}
+                                    transition={{ duration: 0.5, easings: 'easeInOut' }}
                                     className="flex flex-col gap-8 overflow-hidden"
                                 >
-                                    <div className="flex items-start justify-between gap-8">
+                                    <div className="mt-8 flex items-start justify-between gap-8">
                                         <ExperienceInfo data={item.info} />
                                         <p className="w-full max-w-[418px] text-[14px] leading-6 tracking-[-0.25px] text-muted-foreground">
                                             {item.description}
