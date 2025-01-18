@@ -1,10 +1,10 @@
 'use client';
 
 import { navItems } from '@/constants/nav-items';
-import { cn } from '@/lib/utils';
+import { cn, handleLinkClick } from '@/lib/utils';
 import { Icon } from '@iconify/react';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { MouseEvent, useState } from 'react';
+import { useState } from 'react';
 import { NavItem } from '../custom/nav-item';
 import { ThemeToggleButton } from '../custom/theme-toggle-button';
 import { Button } from '../ui/button';
@@ -23,19 +23,6 @@ export const Navbar = () => {
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
-    };
-
-    const handleClickMobileNavItem = (e: MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-
-        const url = new URL(e.currentTarget.href);
-        const hash = url.hash;
-
-        const target = document.querySelector(hash);
-
-        if (!target) return;
-
-        target.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -75,7 +62,7 @@ export const Navbar = () => {
                                         active={active}
                                         onClick={(e) => {
                                             setActive(label);
-                                            handleClickMobileNavItem(e);
+                                            handleLinkClick(e);
                                         }}
                                     />
                                 ))}
@@ -96,7 +83,7 @@ export const Navbar = () => {
                                     active={active}
                                     onClick={(e) => {
                                         setActive(label);
-                                        handleClickMobileNavItem(e);
+                                        handleLinkClick(e);
                                         setIsOpen(false);
                                     }}
                                 />

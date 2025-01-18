@@ -1,6 +1,8 @@
 'use client';
 import useTextRevealAnimation from '@/hooks/use-text-reveal-animation';
+import { handleLinkClick } from '@/lib/utils';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { CutOutContainer } from '../custom/cut-out-container';
 import { Button } from '../ui/button';
@@ -22,15 +24,18 @@ export const Hero = () => {
                 <Button
                     variant="secondary"
                     className="h-full w-full rounded-[16px] text-[20px] text-muted-foreground transition-all duration-300 hover:scale-110 hover:text-black dark:hover:text-white"
+                    asChild
                 >
-                    <motion.p
-                        ref={btnTextScope}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                    >
-                        Get in <br />
-                        touch
-                    </motion.p>
+                    <Link href="#contacts" onClick={(e) => handleLinkClick(e)}>
+                        <motion.p
+                            ref={btnTextScope}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                        >
+                            Get in <br />
+                            touch
+                        </motion.p>
+                    </Link>
                 </Button>
             }
         >
