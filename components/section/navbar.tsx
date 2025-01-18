@@ -13,7 +13,7 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const { scrollY } = useScroll();
     const [scrolledPastThreshold, setScrolledPastThreshold] = useState(false);
-    const [active, setActive] = useState<string>('home');
+    const [active, setActive] = useState<string>('');
 
     useMotionValueEvent(scrollY, 'change', (latest) => {
         setScrolledPastThreshold(latest > window.innerHeight - 100);
