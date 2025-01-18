@@ -1,12 +1,12 @@
 import { SectionTitle } from './section-title';
 
-export const Projects = () => {
+export const Contacts = () => {
     return (
         <section
-            id="projects"
+            id="contacts"
             className="flex w-full flex-col items-center justify-center gap-8 py-32 text-title"
         >
-            <SectionTitle sectionNumber={3} label="Projects" />
+            <SectionTitle sectionNumber={5} label="Get in touch" />
         </section>
     );
 };

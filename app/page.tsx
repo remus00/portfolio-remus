@@ -1,9 +1,11 @@
 import { AboutSection } from '@/components/section/about';
+import { Contacts } from '@/components/section/contacts';
 import { Experience } from '@/components/section/experience';
 import { Footer } from '@/components/section/footer';
 import { Hero } from '@/components/section/hero';
 import { Navbar } from '@/components/section/navbar';
 import { Projects } from '@/components/section/projects';
+import { Testimonials } from '@/components/section/testimonials';
 
 export default function Home() {
     return (
@@ -13,6 +15,8 @@ export default function Home() {
             <AboutSection />
             <Experience />
             <Projects />
+            <Testimonials />
+            <Contacts />
             <Footer />
         </div>
     );

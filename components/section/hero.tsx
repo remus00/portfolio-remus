@@ -17,7 +17,7 @@ export const Hero = () => {
 
     return (
         <CutOutContainer
-            id="hero"
+            id="home"
             button={
                 <Button
                     variant="secondary"

@@ -20,7 +20,7 @@ export const Experience = () => {
 
     return (
         <section
-            id="experience"
+            id="work"
             className="flex w-full flex-col items-center justify-center gap-8 py-32 text-title"
         >
             <SectionTitle sectionNumber={2} label="Work experience" />
