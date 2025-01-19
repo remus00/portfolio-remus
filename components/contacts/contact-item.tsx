@@ -42,7 +42,7 @@ export const ContactItem = ({ isLink, href, label, content, icon, ...rest }: Pro
                     >
                         <Icon
                             icon={icon}
-                            className="!h-6 !w-6 text-muted-foreground transition-all duration-300 group-hover/link:text-black dark:group-hover:text-white"
+                            className="!h-6 !w-6 text-muted-foreground transition-all duration-300 group-hover/link:text-black dark:group-hover/link:text-white"
                         />
                     </Button>
                 </Link>
