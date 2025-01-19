@@ -13,6 +13,7 @@ import {
     ContactFormSchemaType,
 } from '@/validators/contact-form-schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Icon } from '@iconify/react/dist/iconify.js';
 import { useForm } from 'react-hook-form';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
@@ -95,7 +96,12 @@ export const ContactForm = () => {
                             )}
                         />
                     </div>
-                    <Button>Send a message</Button>
+                    <Button className="inline-flex w-full items-center gap-1 rounded-[16px]">
+                        <p className="text-[16px] leading-[20px] tracking-[-0.25px]">
+                            Send a message
+                        </p>
+                        <Icon icon="ri:arrow-right-up-line" className="h-5 w-5" />
+                    </Button>
                 </form>
             </Form>
         </div>
