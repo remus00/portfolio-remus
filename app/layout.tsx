@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
@@ -40,6 +41,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     {children}
+                    <Toaster richColors />
                 </ThemeProvider>
             </body>
         </html>
