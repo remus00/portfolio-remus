@@ -22,8 +22,8 @@ export const Hero = () => {
             id="home"
             button={
                 <Button
-                    variant="secondary"
-                    className="h-full w-full rounded-[16px] text-[20px] text-muted-foreground transition-all duration-300 hover:scale-110 hover:text-black dark:hover:text-white"
+                    variant="ghost"
+                    className="h-full w-full rounded-[16px] text-[20px] text-muted-foreground transition-all duration-300 hover:scale-110 hover:bg-transparent hover:text-black dark:hover:bg-transparent dark:hover:text-white"
                     asChild
                 >
                     <Link href="#contacts" onClick={(e) => handleLinkClick(e)}>
