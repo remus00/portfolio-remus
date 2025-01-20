@@ -48,13 +48,13 @@ export const ExperienceTitle = ({
                 </h3>
             </div>
             <div className="flex items-center gap-2">
-                <p className="text-[18px] leading-[24px] tracking-[-0.25px] text-muted-foreground">
+                <p className="text-[14px] leading-5 tracking-[-0.25px] text-muted-foreground sm:text-[18px] sm:leading-[24px]">
                     {rangeDate}
                 </p>
                 <Icon
                     icon="lsicon:down-filled"
                     className={cn(
-                        'h-6 w-6 text-muted-foreground transition-all duration-300',
+                        'h-5 w-5 text-muted-foreground transition-all duration-300 sm:h-6 sm:w-6',
                         selectedIndex === index && 'rotate-180 transform'
                     )}
                 />
