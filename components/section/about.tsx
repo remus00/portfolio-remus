@@ -6,12 +6,12 @@ export const AboutSection = () => {
     return (
         <section
             id="about"
-            className="flex w-full flex-col items-center justify-center gap-8 py-32 text-title"
+            className="flex w-full flex-col items-center justify-center gap-8 py-16 text-title md:py-32"
         >
             <SectionTitle sectionNumber={1} label="Who am I?" />
 
-            <div className="flex items-start justify-center gap-8">
-                <div className="relative size-64 shrink-0 overflow-hidden rounded-[32px] border-[2px] border-card">
+            <div className="flex flex-col items-center justify-center gap-8 px-4 sm:flex-row sm:items-start sm:gap-4 md:gap-8">
+                <div className="relative size-48 shrink-0 overflow-hidden rounded-[32px] border-[2px] border-card md:size-64">
                     <Image
                         src={RemusImg}
                         alt="Remus's photo"
