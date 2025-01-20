@@ -11,18 +11,18 @@ export const TestimonialCard = ({ data }: Props) => {
     const { fullName, role, avatar, linkedInHref, text } = data;
 
     return (
-        <blockquote className="flex w-full max-w-[900px] flex-col items-center gap-8 rounded-[32px] bg-card px-8 pt-8 transition-all duration-300">
+        <blockquote className="flex w-full flex-col items-start gap-4 rounded-[32px] bg-card p-4 transition-all duration-300 sm:max-w-[540px] sm:p-8 md:max-w-[900px] md:items-center md:gap-8 md:px-8 md:pb-0 md:pt-8">
             <p className="text-[18px] leading-[30px] tracking-[-0.25px] text-black dark:text-white">
                 <span className="mr-1">&ldquo;</span>
                 {text}
                 <span className="ml-1">&rdquo;</span>
             </p>
             <div className="flex items-end transition-all duration-300">
-                <div className="size-9 bg-background">
+                <div className="hidden size-9 bg-background md:block">
                     <div className="size-full rounded-br-[32px] bg-card" />
                 </div>
-                <div className="flex items-center gap-4 rounded-t-[32px] bg-background p-4 transition-all duration-300">
-                    <div className="relative size-[60px] overflow-hidden rounded-[16px]">
+                <div className="flex items-center gap-4 rounded-t-[32px] bg-card transition-all duration-300 md:bg-background md:p-4">
+                    <div className="relative size-[60px] shrink-0 overflow-hidden rounded-[16px]">
                         <Image
                             src={avatar}
                             alt={`${fullName} avatar`}
@@ -45,7 +45,7 @@ export const TestimonialCard = ({ data }: Props) => {
                         </span>
                     </cite>
                 </div>
-                <div className="size-9 bg-background">
+                <div className="hidden size-9 bg-background md:block">
                     <div className="size-full rounded-bl-[32px] bg-card" />
                 </div>
             </div>

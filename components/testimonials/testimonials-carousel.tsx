@@ -25,7 +25,7 @@ export const TestimonialsCarousel = () => {
     };
 
     return (
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 px-4">
             {testimonialsData.map(
                 (testimonial, idx) =>
                     testimonialsIndex === idx && (
