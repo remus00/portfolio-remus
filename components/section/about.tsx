@@ -34,7 +34,7 @@ export const AboutSection = () => {
                     </p>
                     <p className="text-[18px] leading-[24px] tracking-[-0.25px] text-black dark:text-white">
                         Outside work I&apos;m kinda nerdy and I love working out,
-                        certifield gym enjoyer.
+                        certified gym enjoyer.
                     </p>
                 </div>
             </div>
