@@ -1,8 +1,4 @@
-import {
-    AvatarPlaceholder,
-    MarcelloSilvetriAvatar,
-    SalvatoreStamponeAvatar,
-} from '@/public/testimonials';
+import { MarcelloSilvetriAvatar, SalvatoreStamponeAvatar } from '@/public/testimonials';
 import { Testimonial } from '@/types/testimonial';
 
 export const testimonialsData: Testimonial[] = [
@@ -25,12 +21,5 @@ His mastery of Next.js, TailwindCSS and the latest paradigms and best practices 
 On a personal level, you will appreciate his unwavering calm. Tight deadlines, changing priorities, and unexpected challenges: Remus faced it all with patience, focus, and determination. And with a healthy dose of humor, from which the whole team benefited!
 
 I genuinely recommend working Remus: he is a talented professional, standing for reliability and consistency.`,
-    },
-    {
-        fullName: 'Alexandre Bros',
-        role: 'CTO',
-        avatar: AvatarPlaceholder,
-        linkedInHref: '',
-        text: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Eleifend id parturient; natoque libero maecenas maximus maecenas. Fermentum consectetur potenti porttitor ligula felis bibendum pretium potenti. Tortor pharetra non nascetur consectetur risus. Risus mollis mauris eu in nec neque tincidunt. Orci nam malesuada magna, quis orci venenatis. Consectetur turpis leo per, quis ultrices turpis. Torquent hendrerit montes semper cubilia enim massa. Cursus purus dictum eleifend posuere etiam consequat dis. Ac nunc felis tristique cras euismod velit felis.',
     },
 ];
