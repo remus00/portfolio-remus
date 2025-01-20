@@ -19,9 +19,9 @@ export const ProjectWideCard = ({
     img,
 }: Props) => {
     return (
-        <div className="flex h-[300px] w-[calc(100%-332px)] flex-col gap-4 rounded-[32px] bg-card p-4">
-            <div className="flex items-end justify-between">
-                <div className="relative h-[152px] w-[280px] overflow-hidden rounded-[16px]">
+        <div className="flex h-fit w-full max-w-[350px] flex-col gap-4 rounded-[32px] bg-card p-4 md:h-[300px] md:w-full md:max-w-[calc(100%-332px)] md:gap-0">
+            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-0">
+                <div className="relative h-[152px] w-full overflow-hidden rounded-[16px] md:w-[280px]">
                     <Image
                         src={img}
                         alt={`${title} image`}
@@ -29,7 +29,7 @@ export const ProjectWideCard = ({
                         className="scale-125 object-cover object-center"
                     />
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flow-row flex gap-3 md:flex-col">
                     <Link
                         href={liveHref}
                         target="_blank"
