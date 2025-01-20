@@ -44,7 +44,7 @@ export const Hero = () => {
                     ref={h1Scope}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="w-full max-w-[800px] text-center text-[80px] font-medium leading-[75px] tracking-[-0.03px]"
+                    className="w-full max-w-[600px] px-[16px] text-center text-[40px] font-medium leading-[45px] tracking-[-0.03px] sm:text-[64px] sm:leading-[60px] md:px-0 lg:max-w-[800px] lg:text-[80px] lg:leading-[75px]"
                 >
                     Yesterday you said tomorrow
                 </motion.h1>
@@ -52,7 +52,7 @@ export const Hero = () => {
                     ref={pScope}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="mt-8 text-center text-[32px]"
+                    className="mt-8 text-center text-[24px] sm:text-[30px] md:text-[32px]"
                 >
                     Let&apos;s start now{' '}
                     <span className="italic text-primary">together</span>

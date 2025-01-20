@@ -2,12 +2,12 @@
 
 import { navItems } from '@/constants/nav-items';
 import { cn, handleLinkClick } from '@/lib/utils';
-import { Icon } from '@iconify/react';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
-import { NavItem } from '../custom/nav-item';
 import { ThemeToggleButton } from '../custom/theme-toggle-button';
-import { Button } from '../ui/button';
+import { CollapsedNavContent } from '../navbar/collapsed-nav-content';
+import { CollapsedNavMenuButton } from '../navbar/collapsed-nav-menu-button';
+import { NavItem } from '../navbar/nav-item';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -27,30 +27,20 @@ export const Navbar = () => {
 
     return (
         <motion.div
-            initial={{ y: -60 }}
+            initial={{ y: -70 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5, delay: 2.75 }}
-            className="fixed top-2 z-50"
+            className="fixed top-2 z-50 w-full md:w-fit"
         >
             <motion.div
-                className={cn('flex w-fit items-center')}
+                className={cn('hidden w-fit items-center md:flex')}
                 initial={{ x: 0 }}
                 animate={{ x: scrolledPastThreshold ? window.innerWidth / 2 - 34 : 0 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
             >
                 <AnimatePresence>
                     {scrolledPastThreshold ? (
-                        <Button
-                            onClick={handleOpen}
-                            variant="ghost"
-                            size="icon"
-                            className="flex !size-12 items-center justify-center rounded-[16px] bg-card p-0 shadow-sm hover:bg-card hover:text-black dark:text-muted-foreground dark:hover:bg-card dark:hover:text-white"
-                        >
-                            <Icon
-                                icon="heroicons-solid:menu-alt-1"
-                                className="!size-5 text-inherit transition-all duration-300"
-                            />
-                        </Button>
+                        <CollapsedNavMenuButton handleOpen={handleOpen} />
                     ) : (
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-4 rounded-[16px] bg-card px-5 py-4 shadow-sm">
@@ -71,28 +61,34 @@ export const Navbar = () => {
                         </div>
                     )}
                 </AnimatePresence>
-
                 <AnimatePresence>
                     {isOpen && (
-                        <div className="absolute right-0 top-[64px] flex flex-col items-end gap-4 rounded-[32px] bg-card p-4">
-                            {navItems.map(({ label, link }, idx) => (
-                                <NavItem
-                                    key={idx}
-                                    label={label}
-                                    link={link}
-                                    active={active}
-                                    onClick={(e) => {
-                                        setActive(label);
-                                        handleLinkClick(e);
-                                        setIsOpen(false);
-                                    }}
-                                />
-                            ))}
-                            <ThemeToggleButton className="!w-full shadow-none" />
-                        </div>
+                        <CollapsedNavContent
+                            active={active}
+                            setActive={setActive}
+                            setIsOpen={setIsOpen}
+                        />
                     )}
                 </AnimatePresence>
             </motion.div>
+
+            <div className="relative md:hidden">
+                <CollapsedNavMenuButton
+                    handleOpen={handleOpen}
+                    className="ml-auto mr-4 mt-2"
+                />
+
+                <AnimatePresence>
+                    {isOpen && (
+                        <CollapsedNavContent
+                            active={active}
+                            setActive={setActive}
+                            setIsOpen={setIsOpen}
+                            className="right-4 gap-8 p-8 shadow-md"
+                        />
+                    )}
+                </AnimatePresence>
+            </div>
         </motion.div>
     );
 };

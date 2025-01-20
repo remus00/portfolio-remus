@@ -13,7 +13,7 @@ export const NavItem = ({ label, link, active, ...rest }: Props) => {
         <Link
             href={link}
             className={cn(
-                "relative text-[14px] capitalize leading-[16px] after:absolute after:left-0 after:top-full after:h-px after:w-0 after:bg-primary after:transition-all after:duration-500 after:content-[''] hover:after:w-full",
+                "relative text-[20px] capitalize leading-5 after:absolute after:left-0 after:top-full after:h-px after:w-0 after:bg-primary after:transition-all after:duration-500 after:content-[''] hover:after:w-full md:text-[14px] md:leading-[16px]",
                 active === label &&
                     "text-primary after:absolute after:left-0 after:top-full after:h-px after:w-full after:bg-primary after:transition-all after:duration-500 after:content-['']"
             )}
