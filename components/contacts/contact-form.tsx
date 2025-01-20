@@ -36,7 +36,7 @@ export const ContactForm = () => {
     }
 
     return (
-        <div className="w-full flex-col rounded-[32px] bg-card p-8">
+        <div className="w-full flex-col rounded-[16px] bg-card p-4 sm:max-w-[460px] sm:rounded-[32px] sm:p-8 md:max-w-full">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     <div className="space-y-4">
@@ -53,7 +53,6 @@ export const ContactForm = () => {
                                             error={form.formState.errors.fullName}
                                         />
                                     </FormControl>
-
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -71,7 +70,6 @@ export const ContactForm = () => {
                                             error={form.formState.errors.email}
                                         />
                                     </FormControl>
-
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -96,7 +94,7 @@ export const ContactForm = () => {
                             )}
                         />
                     </div>
-                    <Button className="inline-flex w-full items-center gap-1 rounded-[16px]">
+                    <Button className="inline-flex h-[60px] w-full items-center gap-1 rounded-[12px] sm:rounded-[16px] md:h-[40px]">
                         <p className="text-[16px] leading-[20px] tracking-[-0.25px]">
                             Send a message
                         </p>

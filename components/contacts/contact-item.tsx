@@ -20,23 +20,19 @@ export const ContactItem = ({ isLink, href, label, content, icon, ...rest }: Pro
                 .writeText(content)
                 .then(() => toast.success(`${label} copied to clipboard`));
         } catch (err) {
-            console.error('Failed to copy text: ', err);
+            toast.error(`Cannot copy ${label} to clipboard`);
         }
     };
 
     return (
         <>
             {isLink && href ? (
-                <Link
-                    href={href}
-                    className="flex w-fit justify-between gap-3"
-                    target="_blank"
-                >
+                <Link href={href} className="flex justify-between gap-3" target="_blank">
                     <div className="flex flex-col gap-1">
                         <p className="text-[14px] leading-4 tracking-[-0.25px] text-muted-foreground">
                             {label}
                         </p>
-                        <p className="line-clamp-1 shrink-0 text-[16px] leading-5 tracking-[-0.25px] text-black dark:text-white">
+                        <p className="text-[16px] leading-5 tracking-[-0.25px] text-black dark:text-white">
                             {content}
                         </p>
                     </div>

@@ -2,10 +2,10 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
-export const Footer = () => {
+export const Test = () => {
     return (
         <div className="flex h-fit w-full items-center justify-center bg-card px-4">
-            <div className="flex w-full max-w-[900px] flex-col items-center justify-between gap-4 py-8 sm:flex-row">
+            <div className="flex w-full max-w-[900px] flex-col items-center justify-between py-8 sm:flex-row">
                 <p className="flex text-center text-[14px] leading-5 text-muted-foreground sm:text-start">
                     Copyright &copy; Marian Remus Burlacu{' '}
                     <span className="hidden px-1 sm:block">&bull;</span>{' '}

@@ -6,10 +6,10 @@ export const Contacts = () => {
     return (
         <section
             id="contacts"
-            className="flex w-full flex-col items-center justify-center gap-8 py-32 text-title"
+            className="flex w-full flex-col items-center justify-center gap-8 py-16 text-title md:py-32"
         >
             <SectionTitle sectionNumber={5} label="Get in touch" />
-            <div className="flex w-full max-w-[900px] items-start gap-8">
+            <div className="flex w-full max-w-[900px] flex-col items-center gap-8 px-4 md:flex-row md:items-start">
                 <ContactsInfo />
                 <ContactForm />
             </div>

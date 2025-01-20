@@ -11,7 +11,7 @@ export const TestimonialCard = ({ data }: Props) => {
     const { fullName, role, avatar, linkedInHref, text } = data;
 
     return (
-        <blockquote className="flex w-full flex-col items-start gap-4 rounded-[32px] bg-card p-4 transition-all duration-300 sm:max-w-[540px] sm:p-8 md:max-w-[900px] md:items-center md:gap-8 md:px-8 md:pb-0 md:pt-8">
+        <blockquote className="flex w-full flex-col items-start gap-4 rounded-[16px] bg-card p-4 transition-all duration-300 sm:max-w-[540px] sm:rounded-[32px] sm:p-8 md:max-w-[900px] md:items-center md:gap-8 md:px-8 md:pb-0 md:pt-8">
             <p className="text-[18px] leading-[30px] tracking-[-0.25px] text-black dark:text-white">
                 <span className="mr-1">&ldquo;</span>
                 {text}
