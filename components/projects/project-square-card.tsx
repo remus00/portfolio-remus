@@ -11,7 +11,7 @@ interface Props {
 
 export const ProjectSquareCard = ({ img, title, href, description }: Props) => {
     return (
-        <div className="flex max-w-[350px] flex-col gap-4 rounded-[16px] bg-card p-4 sm:rounded-[32px] md:size-[300px]">
+        <div className="flex flex-col gap-4 rounded-[16px] bg-card p-4 sm:max-w-[350px] sm:rounded-[32px] md:size-[300px]">
             <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[12px] sm:rounded-[16px]">
                 <Image src={img} alt={`${title} image`} className="mb-8 scale-[250%]" />
             </div>
