@@ -5,7 +5,7 @@ export const axiosInstace = axios.create({
     baseURL:
         process.env.NODE_ENV === 'development'
             ? 'http://localhost:3000'
-            : 'https://remus-burlacu.com',
+            : 'https://www.remus-burlacu.com',
 });
 
 export const sendEmail = async (data: Contacts) => {
