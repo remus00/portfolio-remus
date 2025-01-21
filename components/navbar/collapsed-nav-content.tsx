@@ -37,7 +37,10 @@ export const CollapsedNavContent = ({
                     }}
                 />
             ))}
-            <ThemeToggleButton className="!w-full shadow-none" />
+            <ThemeToggleButton
+                className="!w-full shadow-none"
+                itemClassName="text-[16px]"
+            />
         </div>
     );
 };

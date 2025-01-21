@@ -12,7 +12,13 @@ import {
 import { cn } from '@/lib/utils';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
-export function ThemeToggleButton({ className }: { className?: string }) {
+export function ThemeToggleButton({
+    className,
+    itemClassName,
+}: {
+    className?: string;
+    itemClassName?: string;
+}) {
     const { setTheme } = useTheme();
 
     return (
@@ -39,11 +45,22 @@ export function ThemeToggleButton({ className }: { className?: string }) {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme('light')}>
+                <DropdownMenuItem
+                    onClick={() => setTheme('light')}
+                    className={cn(itemClassName)}
+                >
                     Light
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme('system')}>
+                <DropdownMenuItem
+                    onClick={() => setTheme('dark')}
+                    className={cn(itemClassName)}
+                >
+                    Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                    onClick={() => setTheme('system')}
+                    className={cn(itemClassName)}
+                >
                     System
                 </DropdownMenuItem>
             </DropdownMenuContent>
