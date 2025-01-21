@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import Link from 'next/link';
 
-export const ThanksPage = () => {
+export default function Thanks() {
     return (
         <div className="flex h-screen w-full flex-col items-center justify-center gap-8 bg-background">
             <div className="flex max-w-[395px] flex-col gap-4 text-center">
@@ -19,6 +19,4 @@ export const ThanksPage = () => {
             </Link>
         </div>
     );
-};
-
-export default ThanksPage;
+}
