@@ -5,7 +5,7 @@ export const ContactsInfo = () => {
         <div className="flex w-full max-w-full flex-col gap-4 rounded-[16px] bg-card p-4 sm:w-full sm:max-w-[460px] sm:rounded-[32px] sm:p-8 md:w-fit md:max-w-fit">
             <ContactItem
                 label="Email"
-                content="info@remusburlacu.com"
+                content="info.remusburlacu@gmail.com"
                 icon="ri:file-copy-line"
             />
 

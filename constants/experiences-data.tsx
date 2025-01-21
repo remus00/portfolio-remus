@@ -39,7 +39,7 @@ export const experiencesData: Experience[] = [
             },
             { icon: 'devicon-plain:axios', label: 'Axios' },
             { icon: 'simple-icons:reactquery', label: 'React Query' },
-            { icon: 'ri:tailwind-css-fill', label: 'Tailwind.css' },
+            { icon: 'ri:tailwind-css-fill', label: 'TailwindCSS' },
             {
                 icon: <FramerMotionIcon className="h-4 w-4 text-muted-foreground" />,
                 label: 'Framer Motion',

@@ -1,3 +1,4 @@
+import { TanstackQueryProvider } from '@/components/providers/tanstack-query-provider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
@@ -23,7 +24,15 @@ export const metadata: Metadata = {
         icon: '/favicon.ico',
         apple: '/apple-touch-icon.png',
     },
-    keywords: ['Marian Remus Burlacu', 'Frontend', 'Frontend developer'],
+    keywords: [
+        'Marian Remus Burlacu',
+        'Frontend',
+        'Frontend developer',
+        'Open to work',
+        'Freelance',
+        'Next.js',
+        'TailwindCSS',
+    ],
 };
 
 export default function RootLayout({
@@ -34,15 +43,17 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={cn('antialiased', poppins.className, poppins.variable)}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="light"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    {children}
-                    <Toaster richColors />
-                </ThemeProvider>
+                <TanstackQueryProvider>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="light"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        {children}
+                        <Toaster richColors />
+                    </ThemeProvider>
+                </TanstackQueryProvider>
             </body>
         </html>
     );

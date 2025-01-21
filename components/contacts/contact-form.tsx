@@ -8,6 +8,7 @@ import {
     FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { useSendEmail } from '@/services/mutation';
 import {
     contactFormSchema,
     ContactFormSchemaType,
@@ -19,6 +20,8 @@ import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
 
 export const ContactForm = () => {
+    const { mutate, isPending } = useSendEmail();
+
     const form = useForm<ContactFormSchemaType>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -33,6 +36,7 @@ export const ContactForm = () => {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values);
+        mutate(values);
     }
 
     return (
