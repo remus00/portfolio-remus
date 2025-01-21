@@ -11,9 +11,14 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     email,
     message,
 }) => (
-    <div className="flex flex-col gap-4">
-        <h1>Hi there I&apos;m {fullName}!</h1>
-        <p>{email}</p>
-        <p>{message}</p>
+    <div>
+        <h1 style={{ lineHeight: '36px', fontSize: '30px' }}>
+            Hi there <span style={{ color: '#ffaa00' }}>I&apos;m {fullName}</span>!
+        </h1>
+        <p style={{ fontWeight: 500, color: '#78716c' }}>Email address: {email}</p>
+        <p>
+            <span style={{ fontWeight: 500, color: '#78716c' }}>Message: </span>
+            {message}
+        </p>
     </div>
 );

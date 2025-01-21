@@ -8,6 +8,7 @@ import {
     FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
 import { useSendEmail } from '@/services/mutation';
 import {
     contactFormSchema,
@@ -20,7 +21,7 @@ import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
 
 export const ContactForm = () => {
-    const { mutate, isPending } = useSendEmail();
+    const { mutate, isPending, isSuccess } = useSendEmail();
 
     const form = useForm<ContactFormSchemaType>({
         resolver: zodResolver(contactFormSchema),
@@ -31,12 +32,13 @@ export const ContactForm = () => {
         },
     });
 
-    // 2. Define a submit handler.
     function onSubmit(values: ContactFormSchemaType) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
         console.log(values);
         mutate(values);
+
+        if (isSuccess) {
+            form.reset();
+        }
     }
 
     return (
@@ -98,11 +100,20 @@ export const ContactForm = () => {
                             )}
                         />
                     </div>
-                    <Button className="inline-flex h-[60px] w-full items-center gap-1 rounded-[12px] sm:rounded-[16px] md:h-[40px]">
+                    <Button
+                        disabled={isPending}
+                        className="inline-flex h-[60px] w-full items-center gap-1 rounded-[12px] sm:rounded-[16px] md:h-[40px]"
+                    >
                         <p className="text-[16px] leading-[20px] tracking-[-0.25px]">
                             Send a message
                         </p>
-                        <Icon icon="ri:arrow-right-up-line" className="h-5 w-5" />
+
+                        <Icon
+                            icon={
+                                isPending ? 'tabler:loader-2' : 'ri:arrow-right-up-line'
+                            }
+                            className={cn('h-5 w-5', isPending && 'animate-spin')}
+                        />
                     </Button>
                 </form>
             </Form>
