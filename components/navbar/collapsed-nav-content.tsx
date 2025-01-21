@@ -39,7 +39,7 @@ export const CollapsedNavContent = ({
             ))}
             <ThemeToggleButton
                 className="!w-full shadow-none"
-                itemClassName="text-[16px]"
+                itemClassName="text-[16px] sm:text-sm"
             />
         </div>
     );
