@@ -19,7 +19,7 @@ export const ProjectWideCard = ({
     img,
 }: Props) => {
     return (
-        <div className="flex h-fit w-full flex-col gap-4 rounded-[16px] bg-card p-4 sm:max-w-[350px] sm:rounded-[32px] md:h-[300px] md:w-full md:max-w-[calc(100%-332px)] md:gap-0">
+        <div className="flex h-fit w-full flex-col gap-4 rounded-[16px] bg-card p-4 sm:max-w-[350px] sm:rounded-[32px] md:h-[300px] md:w-full md:max-w-[calc(100%-332px)] md:gap-4">
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end md:gap-0">
                 <div className="relative h-[152px] w-full overflow-hidden rounded-[12px] sm:rounded-[16px] md:w-[280px]">
                     <Image
