@@ -5,12 +5,12 @@ import { cn, handleLinkClick } from '@/lib/utils';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import { ThemeToggleButton } from '../custom/theme-toggle-button';
-import { CollapsedNavContent } from '../navbar/collapsed-nav-content';
-import { CollapsedNavMenuButton } from '../navbar/collapsed-nav-menu-button';
+import { CollapsedNavbar } from '../navbar/collapsed-navbar';
 import { NavItem } from '../navbar/nav-item';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isOpenCollapsed, setIsOpenCollapsed] = useState<boolean>(false);
     const { scrollY } = useScroll();
     const [scrolledPastThreshold, setScrolledPastThreshold] = useState(false);
     const [active, setActive] = useState<string>('');
@@ -20,10 +20,6 @@ export const Navbar = () => {
 
         if (!scrolledPastThreshold) setIsOpen(false);
     });
-
-    const handleOpen = () => {
-        setIsOpen(!isOpen);
-    };
 
     return (
         <motion.div
@@ -40,7 +36,12 @@ export const Navbar = () => {
             >
                 <AnimatePresence>
                     {scrolledPastThreshold ? (
-                        <CollapsedNavMenuButton handleOpen={handleOpen} />
+                        <CollapsedNavbar
+                            active={active}
+                            isOpen={isOpen}
+                            setActive={setActive}
+                            setIsOpen={setIsOpen}
+                        />
                     ) : (
                         <div className="flex items-center gap-4">
                             <div className="flex items-center gap-4 rounded-[16px] bg-card px-5 py-4 shadow-sm">
@@ -61,33 +62,16 @@ export const Navbar = () => {
                         </div>
                     )}
                 </AnimatePresence>
-                <AnimatePresence>
-                    {isOpen && (
-                        <CollapsedNavContent
-                            active={active}
-                            setActive={setActive}
-                            setIsOpen={setIsOpen}
-                        />
-                    )}
-                </AnimatePresence>
             </motion.div>
 
             <div className="relative md:hidden">
-                <CollapsedNavMenuButton
-                    handleOpen={handleOpen}
-                    className="ml-auto mr-4 mt-2"
+                <CollapsedNavbar
+                    active={active}
+                    isOpen={isOpenCollapsed}
+                    setActive={setActive}
+                    setIsOpen={setIsOpenCollapsed}
+                    className="ml-auto mr-2"
                 />
-
-                <AnimatePresence>
-                    {isOpen && (
-                        <CollapsedNavContent
-                            active={active}
-                            setActive={setActive}
-                            setIsOpen={setIsOpen}
-                            className="right-4 gap-8 p-8 shadow-md"
-                        />
-                    )}
-                </AnimatePresence>
             </div>
         </motion.div>
     );
