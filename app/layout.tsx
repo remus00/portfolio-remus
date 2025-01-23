@@ -19,7 +19,10 @@ export const metadata: Metadata = {
     },
     description:
         "Welcome to Marian Remus Burlacu's portfolio. I am a frontend developer specializing in building performant, responsive, and user-friendly web applications using Next.js, TailwindCSS, and modern frontend tools. Open to work and freelance opportunities.",
-    authors: [{ name: 'Marian Remus Burlacu', url: 'https://remus-burlacu.com' }],
+    authors: [
+        { name: 'Marian Remus Burlacu', url: 'https://remus-burlacu.com' },
+        { name: 'Remus Burlacu', url: 'https://remus-burlacu.com' },
+    ],
     creator: 'Marian Remus Burlacu',
     icons: {
         icon: '/favicon.ico',
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
     },
     keywords: [
         'Marian Remus Burlacu',
+        'Remus Burlacu',
         'Frontend Developer Portfolio',
         'Next.js Developer',
         'Freelance Frontend Developer',
