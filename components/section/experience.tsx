@@ -23,7 +23,7 @@ export const Experience = () => {
             id="work"
             className="flex w-full flex-col items-center justify-center gap-8 py-16 text-title md:py-32"
         >
-            <SectionTitle sectionNumber={2} label="Work experience" />
+            <SectionTitle sectionNumber={3} label="Work experience" />
             <div className="flex w-full max-w-[900px] flex-col gap-8 px-4">
                 {experiencesData.map((item, idx) => (
                     <div

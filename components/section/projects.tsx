@@ -9,7 +9,7 @@ export const Projects = () => {
             id="projects"
             className="flex w-full flex-col items-center justify-center gap-8 py-16 text-title md:py-32"
         >
-            <SectionTitle sectionNumber={3} label="Some of my work" />
+            <SectionTitle sectionNumber={4} label="Some of my work" />
 
             <div className="flex w-full max-w-[900px] flex-col flex-wrap items-center gap-4 px-4 md:flex-row md:gap-8">
                 <ProjectWideCard
