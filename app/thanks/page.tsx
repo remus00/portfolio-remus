@@ -1,5 +1,12 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    alternates: {
+        canonical: 'https://remus-burlacu.com/thanks',
+    },
+};
 
 export default function Thanks() {
     return (

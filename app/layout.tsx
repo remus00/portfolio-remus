@@ -17,8 +17,9 @@ export const metadata: Metadata = {
         template: "%s | Remus's Porfolio",
         default: "Remus's Porfolio",
     },
-    description: "Personal Remus's portfolio",
-    authors: [{ name: 'Marian Remus Burlacu' }],
+    description:
+        "Welcome to Marian Remus Burlacu's portfolio. I am a frontend developer specializing in building performant, responsive, and user-friendly web applications using Next.js, TailwindCSS, and modern frontend tools. Open to work and freelance opportunities.",
+    authors: [{ name: 'Marian Remus Burlacu', url: 'https://remus-burlacu.com' }],
     creator: 'Marian Remus Burlacu',
     icons: {
         icon: '/favicon.ico',
@@ -26,13 +27,41 @@ export const metadata: Metadata = {
     },
     keywords: [
         'Marian Remus Burlacu',
-        'Frontend',
-        'Frontend developer',
-        'Open to work',
-        'Freelance',
-        'Next.js',
-        'TailwindCSS',
+        'Frontend Developer Portfolio',
+        'Next.js Developer',
+        'Freelance Frontend Developer',
+        'Open to Work Developer',
+        'TailwindCSS Portfolio',
+        'React.js Developer',
+        'Modern Web Development',
+        'Remote Developer',
     ],
+    alternates: {
+        canonical: 'https://remus-burlacu.com',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        noarchive: false,
+    },
+    openGraph: {
+        title: "Remus's Portfolio - Frontend Developer & Freelancer",
+        description:
+            'Welcome to Marian Remus Burlacu portfolio. I am a frontend developer specializing in building performant, responsive, and user-friendly web applications using Next.js, TailwindCSS, and modern frontend tools. Open to work and freelance opportunities.',
+        url: 'https://remus-burlacu.com',
+        siteName: "Remus's Portfolio",
+        images: [
+            {
+                url: '/preview.png',
+                width: 1200,
+                height: 630,
+                alt: "Remus's Portfolio Preview Image",
+            },
+        ],
+        locale: 'en_US',
+        type: 'website',
+    },
+    viewport: 'width=device-width, initial-scale=1.0',
 };
 
 export default function RootLayout({
