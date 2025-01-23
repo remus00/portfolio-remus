@@ -74,6 +74,34 @@ body {
     }
 }
 
+@layer utilities {
+    .animate-scroll {
+        animation: scroll var(--animation-duration) linear infinite;
+    }
+
+    .animate-scroll-opposite {
+        animation: scroll-opposite var(--animation-duration) linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-opposite {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
 .line {
     @apply overflow-hidden;
 }

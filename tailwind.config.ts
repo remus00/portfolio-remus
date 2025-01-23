@@ -63,6 +63,20 @@ export default {
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)',
             },
+            animation: {
+                scroll: 'scroll var(--animation-duration) linear infinite',
+                'scroll-opposite': 'scroll var(--animation-duration) linear infinite',
+            },
+            keyframes: {
+                scroll: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                },
+                'scroll-opposite': {
+                    '0%': { transform: 'translateX(-50%)' },
+                    '100%': { transform: 'translateX(0)' },
+                },
+            },
         },
     },
     plugins: [require('tailwindcss-animate')],
