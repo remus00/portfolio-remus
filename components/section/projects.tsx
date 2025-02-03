@@ -20,9 +20,9 @@ export const Projects = () => {
                     description={
                         <>
                             This is a simple project made to learn TanstackQuery via
-                            Next.js, Tailwind.css, Prisma orm, Neon db and Shadcn/ui.
-                            <br /> I also start using it in my private life to keep track
-                            of my income and expenses.
+                            Next.js, Tailwind.css, Prisma orm, Neon db and Shadcn/ui. I
+                            also start using it in my private life to keep track of my
+                            income and expenses.
                         </>
                     }
                 />
