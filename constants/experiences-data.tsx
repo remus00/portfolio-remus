@@ -1,14 +1,39 @@
 import { FramerMotionIcon } from '@/components/icons/framer-motion-icon';
 import { MaterialUiIcon } from '@/components/icons/material-ui';
+import { PandaCssIcon } from '@/components/icons/panda-css-icon';
 import { ReduxIcon } from '@/components/icons/redux-icon';
-import { WolicoLogo } from '@/public';
+import { ItunaLogo, WolicoLogo } from '@/public';
 import { Experience } from '@/types/experience';
 
 export const experiencesData: Experience[] = [
     {
+        name: 'Ituna',
+        img: ItunaLogo,
+        rangeDate: 'Apr 2025 - present',
+        info: {
+            position: 'Frontend Developer',
+            location: 'Remote - Milan Italy',
+            industry: 'Web development',
+            website: {
+                label: 'www.ituna.it',
+                href: 'https://www.ituna.it/',
+            },
+        },
+        description:
+            'Serving as an external consultant at Retail - Reply, collaborating with the internal team on the Legami eCommerce platform',
+        techStack: [
+            { icon: 'simple-icons:react', label: 'React.js' },
+            { icon: 'lineicons:typescript', label: 'Typescript' },
+            { icon: <PandaCssIcon />, label: 'Panda CSS' },
+            { icon: 'devicon-plain:salesforce', label: 'Salesforce - PWA kit' },
+            { icon: 'simple-icons:mobx', label: 'MobX' },
+        ],
+        techStackHeight: '24px',
+    },
+    {
         name: 'Wolico',
         img: WolicoLogo,
-        rangeDate: 'Dec 2023 - present',
+        rangeDate: 'Dec 2023 - Mar 2025',
         info: {
             position: 'Frontend Developer',
             location: 'Remote - Milan Italy',

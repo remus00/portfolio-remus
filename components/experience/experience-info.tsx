@@ -6,7 +6,7 @@ export const ExperienceInfo = ({ data }: { data: PropsType }) => {
     const { position, location, industry, website } = data;
 
     return (
-        <div className="flex w-full flex-col gap-1 sm:max-w-[300px] sm:gap-2">
+        <div className="flex w-full flex-col gap-1 sm:gap-2 md:max-w-[300px]">
             <div className="flex items-center justify-between">
                 <p className="text-[14px] leading-6 tracking-[-0.25px] text-muted-foreground">
                     Position:

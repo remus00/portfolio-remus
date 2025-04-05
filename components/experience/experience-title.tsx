@@ -23,7 +23,7 @@ export const ExperienceTitle = ({
         <div className="flex cursor-pointer items-center justify-between" {...rest}>
             <div className="flex items-center gap-2">
                 {img ? (
-                    <div className="relative size-8 overflow-hidden rounded-[8px]">
+                    <div className="relative size-8 overflow-hidden rounded-[8px] bg-[#F5F5F4] dark:bg-muted">
                         <Image
                             src={img}
                             alt="wolico logo"
@@ -31,7 +31,7 @@ export const ExperienceTitle = ({
                         />
                     </div>
                 ) : (
-                    <div className="relative flex size-8 items-center justify-center overflow-hidden rounded-[8px] bg-[#F5F5F4]">
+                    <div className="relative flex size-8 items-center justify-center overflow-hidden rounded-[8px] bg-[#F5F5F4] dark:bg-muted">
                         <Icon
                             icon="octicon:organization-16"
                             className="h-5 w-5 text-muted-foreground"

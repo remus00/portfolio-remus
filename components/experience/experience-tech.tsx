@@ -10,7 +10,7 @@ interface Props {
 export const ExperienceTech = ({ label, icon }: Props) => {
     const renderIcon = () => {
         if (typeof icon === 'string') {
-            return <Icon icon={icon} className="h-4 w-4 text-muted-foreground" />;
+            return <Icon icon={icon} className="h-4 w-4 fill-muted-foreground" />;
         } else if (isValidElement(icon)) {
             return icon;
         }

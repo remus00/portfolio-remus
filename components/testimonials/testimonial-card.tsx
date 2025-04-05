@@ -1,15 +1,26 @@
+'use client';
+import { cn } from '@/lib/utils';
 import { Testimonial } from '@/types/testimonial';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Button } from '../ui/button';
 
 interface Props {
     data: Testimonial;
 }
 
 export const TestimonialCard = ({ data }: Props) => {
+    const [showMore, setShowMore] = useState(false);
     const { fullName, role, avatar, linkedInHref, text } = data;
+
+    console.log(showMore);
+
+    const toggleText = () => {
+        setShowMore(!showMore);
+    };
 
     return (
         <motion.blockquote
@@ -18,11 +29,33 @@ export const TestimonialCard = ({ data }: Props) => {
             transition={{ duration: 0.4, ease: 'easeIn' }}
             className="flex w-full flex-col items-start gap-4 rounded-[16px] bg-card p-4 transition-all duration-300 sm:max-w-[540px] sm:rounded-[32px] sm:p-8 md:max-w-[900px] md:items-center md:gap-8 md:px-8 md:pb-0 md:pt-8"
         >
-            <p className="text-[18px] leading-[30px] tracking-[-0.25px] text-black dark:text-white">
-                <span className="mr-1">&ldquo;</span>
-                {text}
-                <span className="ml-1">&rdquo;</span>
-            </p>
+            <div className="flex flex-col gap-1">
+                <p
+                    className={cn(
+                        'text-[18px] leading-[30px] tracking-[-0.25px] text-black dark:text-white',
+                        !showMore && 'line-clamp-6'
+                    )}
+                >
+                    <span className="mr-1">&ldquo;</span>
+                    {text}
+                    <span className="ml-1">&rdquo;</span>
+                </p>
+                <Button
+                    variant="link"
+                    onClick={toggleText}
+                    className="mr-auto p-0 text-[14px] leading-[18px] tracking-[-0.25px]"
+                >
+                    {showMore ? 'Show less' : 'Show more'}{' '}
+                    <Icon
+                        icon="ri:arrow-down-s-line"
+                        className={cn(
+                            'transform transition-all duration-300',
+                            showMore ? 'rotate-180' : 'rotate-0'
+                        )}
+                    />
+                </Button>
+            </div>
+
             <div className="flex items-end transition-all duration-300">
                 <div className="hidden size-9 bg-background md:block">
                     <div className="size-full rounded-br-[32px] bg-card" />
